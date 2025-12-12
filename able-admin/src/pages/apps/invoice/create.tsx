@@ -1,5 +1,5 @@
 import { SyntheticEvent, useId, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 // material-ui
 import Autocomplete from '@mui/material/Autocomplete';

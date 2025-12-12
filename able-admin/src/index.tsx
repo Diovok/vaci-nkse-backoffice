@@ -1,12 +1,17 @@
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import { IntlProvider } from 'react-intl';
+
+import router from 'routes';
 import { AuthProvider } from 'hooks/useAuth';
+import ThemeCustomization from 'themes';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <BrowserRouter>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
-  </BrowserRouter>
+  <ThemeCustomization>
+    <IntlProvider locale="hu" defaultLocale="hu" messages={{}}>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </IntlProvider>
+  </ThemeCustomization>
 );

@@ -31,41 +31,12 @@ export default function Login() {
           <Logo />
         </Grid>
         <Grid size={12}>
-          <Grid container spacing={1}>
-            <Grid size={12}>
-              <AuthSocButton>
-                <CardMedia component="img" src={imgFacebook} alt="Facebook" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> Sign In with Facebook
-              </AuthSocButton>
-            </Grid>
-            <Grid size={12}>
-              <AuthSocButton>
-                <CardMedia component="img" src={imgTwitter} alt="Facebook" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> Sign In with Twitter
-              </AuthSocButton>
-            </Grid>
-            <Grid size={12}>
-              <AuthSocButton>
-                <CardMedia component="img" src={imgGoogle} alt="Facebook" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> Sign In with Google
-              </AuthSocButton>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid size={12}>
           <AuthDivider>
-            <Typography variant="body1">OR</Typography>
+            <Typography>Login</Typography>
           </AuthDivider>
         </Grid>
         <Grid size={12}>
           <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'baseline', mb: { xs: -0.5, sm: 0.5 } }}>
-            <Typography variant="h3">Login</Typography>
-            <Typography
-              component={Link}
-              to={isLoggedIn ? '/auth/register' : '/register'}
-              variant="body1"
-              sx={{ textDecoration: 'none' }}
-              color="primary"
-            >
-              Don&apos;t have an account?
-            </Typography>
           </Stack>
         </Grid>
         <Grid size={12}>
